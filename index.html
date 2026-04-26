@@ -3,44 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>happy birthday</title>
+
     <style>
         body {
             margin: 0;
             overflow-y: auto;
-            height: 100vh;
+            min-height: 100vh;
+
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
+
+            /* 👉 위치 자연스럽게 내려줌 */
+            padding-top: 50px;
+            padding-bottom: 80px;
 
             background: linear-gradient(135deg, #fff3e0, #ffe0f0, #e0f7ff);
             font-family: Arial, sans-serif;
         }
 
         .content {
-            position: relative;
             width: 90vw;
             max-width: 800px;
             aspect-ratio: 16 / 9;
-            margin-top: 40px;
-        }
 
-        .content:first-child {
-            margin-top: 60px;
-        }
-
-        .content:last-child {
-            margin-bottom: 60px;
+            /* 👉 영상 사이 간격 */
+            margin-bottom: 40px;
         }
 
         video {
             width: 100%;
             height: 100%;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+            /* 👉 더 부드러운 그림자 */
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        /* 👉 마지막 영상 아래 여백 */
+        .content:last-child {
+            margin-bottom: 0;
         }
     </style>
 </head>
+
 <body>
 
     <!-- 첫 번째 영상 -->
